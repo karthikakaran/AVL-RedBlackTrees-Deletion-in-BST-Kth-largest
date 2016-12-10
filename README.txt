@@ -1,0 +1,123 @@
+CS 5V81.012 : Implementation of Data Structures and Algorithms
+Optional Project 4 - Group 3
+
+***********************************************************************************************************************************************************************************
+Note: Timer.java needs to be compiled because most of the programs use it
+so compile :  javac Timer.java
+   run :      java Timer.java
+
+***********************************************************************************************************************************************************************************
+1. Quick Sort - analysis between Standard and Dual Pivot
+
+compile : javac quickSortDualPivot.java, javac quickSortStandard.java
+run : java quickSortDualPivot, java quickSortStandard
+
+Instruction to toggle between duplicate and distinct numbers : in Line 70 : arr[j] = new Integer(n-2); for duplicate and arr[j] = new Integer(i); for Distinct
+Input : 2^23
+
+Output: 
+
+Time: 1726 msec.
+Memory: 210 MB / 358 MB.
+
+These are sample outputs, the analysis is provided in the doc attached
+******************************************************************************************************************************************************************
+2. Internal and External sort - Selection of K largest elements
+
+compile : javac Selection.java
+run : java Selection
+
+Input : 1000000 elements
+	Enter k value ::
+	50
+
+Output :
+
+External sorting gives Kth largest numbers as :: 
+999951 999952 999953 999954 999955 999956 999957 999958 999959 999960 999961 999962 999963 999964 999965 999966 999967 999968 999969 999970 999971 999972 999973 999974 999975 999976 999977 999978 999979 999980 999981 999982 999983 999984 999985 999986 999987 999988 999989 999990 999991 999992 999993 999994 999995 999996 999997 999998 999999 1000000 
+Time: 81 msec.
+Memory: 38 MB / 119 MB.
+
+Internal sorting gives Kth largest numbers as :: 
+999951 999952 999953 999955 999956 999957 999958 999959 999960 999961 999954 999962 999963 999964 999965 999966 999967 999968 999969 999970 999971 999972 999973 999974 999975 999976 999977 999978 999979 999980 999981 999982 999983 999984 999985 999986 999987 999988 999989 999990 999991 999992 999993 999994 999995 999996 999997 999998 999999 1000000 
+Time: 85 msec.
+Memory: 38 MB / 119 MB.
+
+******************************************************************************************************************************************************************
+3. BST remove()
+
+compile : javac BSTDriver.java 
+run : java BSTDriver
+
+Input and Output interactively:
+
+89
+Add 89 : [1] 89
+34
+Add 34 : [2] 34 89
+12
+Add 12 : [3] 12 34 89
+56
+Add 56 : [4] 12 34 56 89
+23
+Add 23 : [5] 12 23 34 56 89
+12
+Add 12 : [5] 12 23 34 56 89
+-89
+Remove -89 : [4] 12 23 34 56
+-12
+Remove -12 : [3] 23 34 56
+-23
+Remove -23 : [2] 34 56
+
+******************************************************************************************************************************************************************
+
+4. AVL Tree add()
+
+compile : javac AVL_BST.java
+run : java AVL_BST
+
+Input :
+14 17 11 7 53 4 13
+
+Output:
+              
+Add 14 : 
+[1] 14
+Add 17 : 
+[2] 14 17
+Add 11 : 
+[3] 11 14 17
+Add 7 : 
+[4] 7 11 14 17
+Add 53 : 
+[5] 7 11 14 17 53
+Add 4 : 
+[6] 4 7 11 14 17 53
+Add 13 : 
+[7] 4 7 11 13 14 17 53
+12 8
+Add 12 : 
+[8] 4 7 11 12 13 14 17 53
+Add 8 : 
+[9] 4 7 8 11 12 13 14 17 53
+
+******************************************************************************************************************************************************************
+
+5. Red Black Trees add()
+
+compile : javac RedBlack.java
+run : java RedBlack
+
+Input : 47 32 71 93 65 82 87 
+	
+Output :
+
+Add 47 : [1] 47color true
+Add 32 : [2] 32color false 47color true
+Add 71 : [3] 32color false 47color true 71color false
+Add 93 : [4] 32color true 47color true 71color true 93color false
+Add 65 : [5] 32color true 47color true 65color false 71color true 93color false
+Add 82 : [6] 32color true 47color true 65color true 71color false 82color false 93color true
+Add 87 : [7] 32color true 47color true 65color true 71color false 82color false 87color true 93color false
+
