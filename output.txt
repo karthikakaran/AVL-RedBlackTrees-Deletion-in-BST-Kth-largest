@@ -7,21 +7,6 @@ so compile :  javac Timer.java
    run :      java Timer.java
 
 ***********************************************************************************************************************************************************************************
-1. Quick Sort - analysis between Standard and Dual Pivot
-
-compile : javac quickSortDualPivot.java, javac quickSortStandard.java
-run : java quickSortDualPivot, java quickSortStandard
-
-Instruction to toggle between duplicate and distinct numbers : in Line 70 : arr[j] = new Integer(n-2); for duplicate and arr[j] = new Integer(i); for Distinct
-Input : 2^23
-
-Output: 
-
-Time: 1726 msec.
-Memory: 210 MB / 358 MB.
-
-These are sample outputs, the analysis is provided in the doc attached
-******************************************************************************************************************************************************************
 2. Internal and External sort - Selection of K largest elements
 
 compile : javac Selection.java
